@@ -6,7 +6,7 @@
     <groupId>com.example.application</groupId>
     <artifactId>hillagroceryapp</artifactId>
     <name>Hilla Grocery App</name>
-    <version>1.0-SNAPSHOT</version>
+    <version>1.0</version>
     <packaging>jar</packaging>
 
     <properties>
@@ -72,6 +72,14 @@
         </pluginRepository>
     </pluginRepositories>
 
+<distributionManagement>
+    <repository>
+        <id>central</id>
+        <name>a0logz44thjdf-artifactory-primary-0-releases</name>
+        <url>https://learningdevops1606.jfrog.io/artifactory/java-apps-libs-release</url>
+    </repository>
+</distributionManagement>
+
     <dependencyManagement>
         <dependencies>
             <dependency>
@@ -99,13 +107,13 @@
         </dependency>
 
         <!-- https://mvnrepository.com/artifact/jakarta.validation/jakarta.validation-api -->
-<dependency>
-    <groupId>jakarta.validation</groupId>
-    <artifactId>jakarta.validation-api</artifactId>
-    <version>3.0.2</version>
-</dependency>
+        <dependency>
+            <groupId>jakarta.validation</groupId>
+            <artifactId>jakarta.validation-api</artifactId>
+            <version>3.0.2</version>
+        </dependency>
 
-        
+
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-test</artifactId>
@@ -161,6 +169,8 @@
                     </execution>
                 </executions>
             </plugin>
+
+           
         </plugins>
     </build>
 
